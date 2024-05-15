@@ -13,13 +13,9 @@ function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
     return <div>
         <AccordionTitle title={props.titleValue}/>
         <button onClick={() => {
-            setCollapsed(true)
-        }}
-                onDoubleClick={() => {
-                    setCollapsed(false)
-                }}>Toggle
+            setCollapsed(!collapsed)
+        }}>Toggle
         </button>
-        {/*<button onClick={() => {setCollapsed(false)}}>Open</button>*/}
         {!collapsed && <AccordionBody/>}
     </div>
 }

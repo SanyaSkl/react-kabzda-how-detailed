@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 type PropsType = {
-    //on: boolean
+    on: boolean
 }
 
 function OnOff (props: PropsType) {
