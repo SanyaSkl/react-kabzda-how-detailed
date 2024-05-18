@@ -35,7 +35,7 @@ function OnOff (props: PropsType) {
         marginLeft: "5px",
         background: on ? "lightgreen" : "red"
     };
-
+    
     return <div>
         <div style={onStyle} onClick={ () => {setOn(true)}}>on</div>
         <div style={offStyle} onClick={ () => {setOn(false)}}>off</div>
