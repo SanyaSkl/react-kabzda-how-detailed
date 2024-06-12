@@ -1,26 +1,38 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Rating, RatingValueType} from "./components/Rating/Rating";
-import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
+// import {Rating, RatingValueType} from "./components/Rating/Rating";
+// import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import Accordion from "./components/Accordion/Accordion";
+import OnOff from "./components/OnOff/OnOff";
+import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
 
 function App(props: any) {
     console.log("App rendering")
 
-    let [ratingValue, setRatingValue] = useState<RatingValueType>(4)
+    //let [ratingValue, setRatingValue] = useState<RatingValueType>(4)
+    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
+    let [switchOn, setSwitchOn] = useState<boolean>(false);
 
     return (
         <div>
 
-            {/* <OnOff />*/}
-            {/*  <OnOff on={true}/>
-            <OnOff on={false}/>*/}
+            <Accordion
+                titleValue={"Menu"}
+                collapsed={accordionCollapsed}
+                onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}/>
 
-            <UncontrolledAccordion titleValue={"Menu"}/>
-            <UncontrolledAccordion titleValue={"Users"}/>
+            {/*<OnOff on={switchOn} onChange={setSwitchOn}/>*/}
 
-            <Rating value={ratingValue} onClick={setRatingValue}/>
+            <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
+            {/* <UncontrolledOnOff />*/}
+            {/*  <UncontrolledOnOff on={true}/>
+            <UncontrolledOnOff on={false}/>*/}
+
+            {/*<UncontrolledAccordion titleValue={"Menu"}/>*/}
+            {/*<UncontrolledAccordion titleValue={"Users"}/>*/}
+
+            {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
             {/*<UncontrolledRating />*/}
-
 
             {/*<Accordion titleValue={"Menu"} collapsed={true}/>
             <Accordion titleValue={"Users"} collapsed={false}/>
