@@ -1,9 +1,9 @@
 import {action} from '@storybook/addon-actions'
-
 import Accordion from './Accordion';
 import React, {useState} from "react";
 
 export default {
+    title: 'Accordion stories',
     component: Accordion
 }
 
@@ -33,7 +33,7 @@ export const AccordionDemo = () => {
     const [collapsed, setCollapsed] = useState(false)
     return (
         <Accordion titleValue={'Accordion Demo'}
-                   collapsed={false}
+                   collapsed={collapsed}
                    onChange={() => {
                        setCollapsed(!collapsed)
                    }}
