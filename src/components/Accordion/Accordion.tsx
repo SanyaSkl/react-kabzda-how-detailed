@@ -6,7 +6,7 @@ type AccordionPropsType = {
     onChange: () => void
 }
 
-function Accordion(props: AccordionPropsType) {
+export function Accordion(props: AccordionPropsType) {
     console.log("Accordion rendering")
 
         return <div>
@@ -37,6 +37,3 @@ function AccordionBody() {
         </ul>
     )
 }
-
-
-export default Accordion
