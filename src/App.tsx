@@ -1,10 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
-// import {Rating, RatingValueType} from "./components/Rating/Rating";
-// import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
-import Accordion from "./components/Accordion/Accordion";
-import OnOff from "./components/OnOff/OnOff";
-import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
+import {Accordion} from "./components/Accordion/Accordion";
+import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 
 function App(props: any) {
     console.log("App rendering")
