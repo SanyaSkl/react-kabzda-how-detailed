@@ -6,7 +6,7 @@ export default {
 
 export const UncontrolledInput = () => <input/>
 
-export const TruckValueOfUncontrolledInput = () => {
+export const TrackValueOfUncontrolledInput = () => {
     const [value, setValue] = useState('')
 
     const onChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -29,6 +29,15 @@ export const GetValueOfUncontrolledInputByButtonPress = () => {
     return <><input ref={inputRef} />
         <button onClick={save}>save</button>
         - actual value: {value} </>
+}
+
+export const ControlledInput = () => {
+    const [parentValue, setParentValue] = useState('')
+
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setParentValue(e.currentTarget.value)
+    }
+    return <input value={parentValue} onChange={onChange}/>
 }
 
 export const ControlledInputWithFixedValue = () => <input value={'it-incubator'}/>
