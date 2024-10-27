@@ -16,7 +16,10 @@ function App(props: any) {
             <Accordion
                 titleValue={"Menu"}
                 collapsed={accordionCollapsed}
-                onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}/>
+                onChange={() => {
+                    setAccordionCollapsed(!accordionCollapsed);
+                }} onItemClick={() => {
+            }} items={[]}/>
 
             {/*<OnOff on={switchOn} onChange={setSwitchOn}/>*/}
 

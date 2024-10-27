@@ -1,6 +1,6 @@
 import React from "react";
 
-type ItemType = {
+export type ItemType = {
     title: string
     value: any
 }
@@ -42,7 +42,8 @@ function AccordionBody(props: AccordionBodyPropsType) {
     console.log("AccordionBody rendering")
     return (
         <ul>
-            {props.items.map((i, index) => <li onClick={() => { props.onItemClick(i.value)}} key={index}>{i.title}</li>)}
+            {props.items.map((i, index) =>
+                <li onClick={() => { props.onItemClick(i.value)}} key={index}>{i.title}</li>)}
         </ul>
     )
 }
