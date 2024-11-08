@@ -12,6 +12,8 @@
     position: absolute;
     padding: 5px;
     border: 1px black solid;
+    min-width: 93px;
+    border-radius: 3px;
 }
 
 .item.selected {
