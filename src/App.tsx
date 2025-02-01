@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Accordion} from "./components/Accordion/Accordion";
+import {AnalogClock} from "./components/Clock/AnalogClock/AnalogClock";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 
 function App(props: any) {
@@ -13,17 +14,19 @@ function App(props: any) {
     return (
         <div>
 
-            <Accordion
-                titleValue={"Menu"}
-                collapsed={accordionCollapsed}
-                onChange={() => {
-                    setAccordionCollapsed(!accordionCollapsed);
-                }} onItemClick={() => {
-            }} items={[]}/>
+            <AnalogClock/>
+
+            {/*<Accordion*/}
+            {/*    titleValue={"Menu"}*/}
+            {/*    collapsed={accordionCollapsed}*/}
+            {/*    onChange={() => {*/}
+            {/*        setAccordionCollapsed(!accordionCollapsed);*/}
+            {/*    }} onItemClick={() => {*/}
+            {/*}} items={[]}/>*/}
 
             {/*<OnOff on={switchOn} onChange={setSwitchOn}/>*/}
 
-            <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
+            {/*<UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}*/}
             {/* <UncontrolledOnOff />*/}
             {/*  <UncontrolledOnOff on={true}/>
             <UncontrolledOnOff on={false}/>*/}
@@ -46,13 +49,13 @@ function App(props: any) {
     );
 }
 
-type PageTitlePropsType = {
-    title: string
-}
-
-function PageTitle(props: PageTitlePropsType) {
-    console.log("PageTitle rendering")
-    return <h1>{props.title}</h1>
-}
+// type PageTitlePropsType = {
+//     title: string
+// }
+//
+// function PageTitle(props: PageTitlePropsType) {
+//     console.log("PageTitle rendering")
+//     return <h1>{props.title}</h1>
+// }
 
 export default App;
